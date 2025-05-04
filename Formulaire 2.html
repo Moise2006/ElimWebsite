@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire Étudiant</title>
+  <style>
+    body {
+      background: #ccc;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 330px;
+      margin: auto;
+    }
+    fieldset {
+      margin-bottom: 15px;
+      border: 15px solid black;
+      padding: 10px;
+      
+    }
+    legend {
+      font-weight: bold;
+      color: red;
+    }
+    label {
+      display: inline-block;
+      width: 100px;
+      margin-bottom: 5px;
+      color: red;
+    }
+    input, select, textarea {
+      width: calc(100% - 110px);
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+    .group {
+      display: flex;
+      align-items: center;
+    }
+    .group input[type="checkbox"],
+    .group input[type="radio"] {
+      width: auto;
+      margin-right: 10px;
+    }
+    .boutons {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+
+  <center><h2>Formulaire d'enregistrement des étudiants</h2></center>
+
+  <form>
+    <fieldset>
+      <legend>État Civil</legend>
+      <label for="nom">Nom:</label>
+      <input type="text" id="nom" name="nom" required><br>
+
+      <label for="prenom">Prénom:</label>
+      <input type="text" id="prenom" name="prenom" required><br>
+
+      <label for="sexe">Sexe:</label>
+      <select id="sexe" name="sexe" required>
+        <option value="">--Choisir--</option>
+        <option value="Homme">Homme</option>
+        <option value="Femme">Femme</option>
+      </select><br>
+
+      <label for="email">Mail:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="contact">Contact:</label>
+      <input type="tel" id="contact" name="contact" pattern="[0-9]+" required><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Les Diplômes</legend>
+      <div class="group"><input type="checkbox" name="diplome" value="CEP"> CEP</div>
+      <div class="group"><input type="checkbox" name="diplome" value="BEPC"> BEPC</div>
+      <div class="group"><input type="checkbox" name="diplome" value="BAC"> BAC</div>
+      <div class="group"><input type="checkbox" name="diplome" value="BTS"> BTS</div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Adresse</legend>
+      <textarea name="adresse" id="adresse" rows="3" required></textarea>
+    </fieldset>
+
+    <fieldset>
+      <legend>Pays</legend>
+      <div class="group"><input type="radio" name="pays" value="Bénin" required> Bénin</div>
+      <div class="group"><input type="radio" name="pays" value="Sénégal"> Sénégal</div>
+      <div class="group"><input type="radio" name="pays" value="France"> France</div>
+    </fieldset>
+
+    <div class="boutons">
+      <button type="submit">Envoyer</button>
+      <button type="reset">Effacer</button>
+      <a href="about:blank"><button type="button">Quitter</button></a>
+      <a href="index.html" class="btn">← Retour à l'accueil</a>
+      </body>
+      </html>

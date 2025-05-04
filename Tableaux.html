@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Page 3 - Tableaux</title>
+  <style>
+    body {
+      background-color: silver;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    table {
+      margin: 30px auto;
+      border-collapse: collapse;
+    }
+
+    td, th {
+      border: 4px solid black;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .a { background-color: red; color: white; }
+    .b { background-color: green; color: white; }
+    .c { background-color: blue; color: white; }
+    .g { border: 4px solid black; }
+
+    caption {
+      font-weight: bold;
+      text-decoration: underline;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: block;
+      margin: 30px auto;
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    body {
+    background-color: #bfbfbf;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 40px;
+    }
+    .tableau {
+    display: inline-block;
+    border: 4px solid black;
+    }
+    .ligne {
+    display: flex;
+    }
+    .cellule {
+    border: 2px solid black;
+    width: 100px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    }
+    .cellule.large {
+    background-color: green;
+    color: black;
+    height: 80px;
+    width: 306px;
+    }
+    .titre {
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <table>
+    <caption>Tab1</caption>
+    <tr><th colspan="2">A</th></tr>
+    <tr><td>B</td><td>C</td></tr>
+  </table>
+
+  <table>
+    <caption>Tab2</caption>
+    <tr>
+      <th rowspan="2">D</th>
+      <th>E</th>
+    </tr>
+    <tr><td>F</td></tr>
+  </table>
+
+  <table>
+    <caption>Tab3</caption>
+    <tr>
+      <td class="a" rowspan="2">A</td>
+      <td colspan="3">B</td>
+    </tr>
+    <tr>
+      <td class="c" colspan="3">C</td>
+    </tr>
+    <tr>
+      <td rowspan="2">D</td>
+      <td class="b" rowspan="2">E</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td class="g">G</td>
+    </tr>
+  </table>
+  
+  <div class="titre">Tab 4</div>
+  
+  <div class="tableau">
+  <div class="ligne">
+  <div class="cellule large">IG1-B</div>
+  </div>
+  <div class="ligne">
+  <div class="cellule">IG1-A</div>
+  <div class="cellule">IG2-A</div>
+  <div class="cellule">IG2-B</div>
+  </div>
+  </div>
+
+  <a href="index.html" class="btn">← Retour à l'accueil</a>
+
+</body>
+</html>
