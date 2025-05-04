@@ -2,55 +2,121 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Index - Bienvenue</title>
+  <title>Accueil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      background-color: gray;
-      font-family: Arial, sans-serif;
-      text-align: center;
+    * {
       margin: 0;
       padding: 0;
-      border: ridge, thick;
-      border-width: 100px 40px ;
-      border-color: black
+      box-sizing: border-box;
     }
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 15px 30px;
-      background-color: silver;
-      color: black;
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+    }
+
+    .sidebar {
+      width: 250px;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 22px;
+    }
+
+    .sidebar a {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
       text-decoration: none;
-      border-radius: 8px;
-      font-size: 18px;
-      transition: 0.3s;
-      
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 100px;
+      text-align: center;
+      transition: all 0.10s ease;
     }
-    .gras {
-     font-weight: bold;
-     
-     }
-    .btn:hover {
-      background-color: #005fa3;
+
+    .sidebar a:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.05);
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      backdrop-filter: blur(4px);
+      text-align: center;
+      padding: 40px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .content h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .content p {
+      font-size: 15px;
+      max-width: 600px;
+      color: #f1f1f1;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-<p>
-</p>
-<h1><div class="gras">WELCOME ON MY WEBSITE</div></h1>
-  
-    
-  
-  <p>
-   <br>
-  </p>
-<a href="page 1.html" class="btn">Page 1</a>
-<a href="page 2.html" class="btn">Page 2</a>
-<a href="page 3.html" class="btn">Page 3</a>
-<a href="Tableaux.html" class="btn">Tableaux</a>
-<a href="Formulaire 1.html" class="btn">Formulaire 1</a>
-<a href="Formulaire 2.html" class="btn">Formulaire 2</a>
- <!-- Nouveau bouton ajouté ici -->
+  <div class="container">
+    <div class="sidebar">
+      <h2>Menu</h2>
+      <a href="page 1.html">Page 1</a>
+      <a href="page 2.html">Page 2</a>
+      <a href="page 3.html">Page 3</a>
+      <a href="tableaux.html">Tableaux</a>
+      <a href="formulaire 1.html">Formulaire 1</a>
+      <a href="formulaire 2.html">Formulaire 2</a>
+    </div>
+    <div class="content">
+      <h4>WELCOME ON MY WEBSITE</h4>
+      <p>
+      </p>
+      <p>Découvre toutes les pages depuis le menu à gauche !</p>
+    </div>
+  </div>
+  <footer>
+    @Elim tous droits réservés
+  </footer>
 </body>
 </html>
+
